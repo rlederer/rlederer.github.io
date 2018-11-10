@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Searches</title>
+  </head>
+  <body>
+    <h1>Hey I'm a heading!</h1>
+    <button id="submit-element" type="button" name="button">Hey I'm a button!</button>
+    <input id="input-element" type="text" name="">
+
+    <script type="text/javascript">
+      let input = document.getElementById('input-element');
+      let button = document.getElementById('submit-element');
+
+      let arr = [];
+
+      button.addEventListener('click', () => {
+
+          arr.push(input.value);
+          console.log(arr);
+      });
+    </script>
+
+  </body>
+</html>
