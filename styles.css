@@ -12,8 +12,9 @@ h2 {
   color: #00008B;
 }
 
-innerHTML {
+p {
 	width = 100px;
+	font-size:18px;
 }
 
 body {
