@@ -12,6 +12,10 @@ h2 {
   color: #00008B;
 }
 
+innerHTML {
+	width = 100px;
+}
+
 body {
     background-color: white;
 }
