@@ -1013,7 +1013,7 @@
     "disability": ""
   },
   {
-    "name": "American job center",
+    "name": "American Job Center",
     "address": "1671 Worcester Rd",
     "city": "Framingham",
     "state": "MA",
@@ -1792,7 +1792,7 @@
               var website = resource.website;
               if (website == "") website = "#";
             // console.log(typer);
-            if(resource.type.includes('fuelassistance')){
+            if(resource.type.includes('fuel')){
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -1836,7 +1836,7 @@
               var website = resource.website;
               if (website == "") website = "#";
             // console.log(typer);
-            if(resource.type.includes('adulteducation')){
+            if(resource.type.includes('adulted')){
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
