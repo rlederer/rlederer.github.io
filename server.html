@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <center>
   <head>
@@ -9,7 +10,7 @@
   <body onload = "initMap()">
     <h1><i><a href = "server.html">Waltham Resource Guide</a></i></h1>
 
-    <div id = "map" style = "width:640px; height:480px; display: inline-block"> </div>
+    <div id = "map" style = "width:940px; height:480px; float:left; display: inline-block"> </div>
       </head>
       <body>
 <style>
@@ -20,6 +21,7 @@
       }
       #right-panel select, #right-panel input {
         font-size: 15px;
+
       }
       #right-panel select {
         width: 100%;
@@ -29,7 +31,7 @@
       }
       #right-panel {
         height: 100%;
-        float: none;
+        float: ;
         width: 640px;
         overflow: auto;
       }
@@ -45,13 +47,46 @@
              <option value="TRANSIT">Transit</option>
            </select>
            </div>
+<style>
+#dropdown {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #dropdown select, #dropdown input {
+        font-size: 15px;
+
+      }
+      #dropdown select {
+        width: 100%;
+      }
+      #dropdown i {
+        font-size: 12px;
+      }
+      #dropdown {
+        height: 100%;
+        float: right;
+        width: 640px;
+        overflow: auto;
+      }
+</style>
 
       <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">What types of resources do you need?</button>
         <div id="myDropdown" class="dropdown-content">
+          <button id="adulteducation">Adult Education</button>
+          <br>
+          <button id="childcare">Childcare</button>
+          <br>
+          <button id="employment">Employment</button>
+            <br>
           <button id='food'>Food</button>
           <br>
+          <button id="fuelassistance">Fuel Assistance</button>
+          <br>
           <button id="healthcare">Health Care</button>
+          <br>
+          <button id="hotline">Hotline</button>
           <br>
           <button id="housing">Housing</button>
           <br>
@@ -59,15 +94,7 @@
           <br>
           <button id="legaladvice">Legal Advice</button>
           <br>
-          <button id="fuelassistance">Fuel Assistance</button>
-          <br>
-          <button id="hotline">Hotline</button>
-          <br>
-          <button id="adulteducation">Adult Education</button>
-          <br>
-          <button id="childcare">Childcare</button>
-          <br>
-          <button id="employment">Employment</button>
+
         </div>
       </div>
       <button id="wantDirections">Want directions?</button>
