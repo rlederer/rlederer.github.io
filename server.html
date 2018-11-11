@@ -7,7 +7,7 @@
   </head>
 
   <body onload = "initMap()">
-    <h1><i>Waltham Resource Guide</i></h1>
+    <h1><i><a href = "server.html">Waltham Resource Guide</a></i></h1>
 
     <div id = "map" style = "width:640px; height:480px; display: inline-block"> </div>
       </head>
@@ -74,9 +74,10 @@
           <button id="employment">Employment</button>
         </div>
       </div>
-    </div>
-        <button id="wantDirections">Want directions?</button>
+      <button id="wantDirections">Want directions?</button>
       </div>
+
+    </div>
       <script>
       /* When the user clicks on the button,
       toggle between hiding and showing the dropdown content */
@@ -1859,6 +1860,7 @@
 
                }
              }
+
         wantDirections.addEventListener('click', () =>{
            var directionsDisplay = new google.maps.DirectionsRenderer;
            var directionsService = new google.maps.DirectionsService;
@@ -1915,7 +1917,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('immigration')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -1937,7 +1939,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('healthcare')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -1959,7 +1961,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('housing')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -1981,7 +1983,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('legaladvice')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -2003,7 +2005,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('fuelassistance')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -2025,7 +2027,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('hotline')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -2047,7 +2049,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('adulteducation')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -2069,7 +2071,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('childcare')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -2091,7 +2093,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('employment')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
