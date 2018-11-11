@@ -1592,6 +1592,10 @@
         var yellowStar = 'https://i.imgur.com/ssbX3PV.png';
         var redStar = 'https://i.imgur.com/Z1hkaW1.png';
         var blackStar = 'https://i.imgur.com/xckV6jl.png';
+        var pinkStar = 'https://i.imgur.com/b1Clbsz.png';
+        var lightBlueStar = 'https://i.imgur.com/TS42rxb.png'
+        var darkGreenStar = 'https://i.imgur.com/zw74WJ2.png';
+        var darkRedStar = 'https://i.imgur.com/zeKhMW6.png';
         var markerImage = 'https://image.ibb.co/m5CUCq/star.png';
         function initMap() {
           // Initialize Google Maps
@@ -1947,7 +1951,7 @@
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
                 title: resource.name,
-                icon: blueStar
+                icon: blackStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
             }
@@ -1991,7 +1995,7 @@
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
                 title: resource.name,
-                icon: greenStar
+                icon: pinkStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
             }
@@ -2013,7 +2017,7 @@
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
                 title: resource.name,
-                icon: blueStar
+                icon: lightBlueStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
             }
@@ -2035,7 +2039,7 @@
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
                 title: resource.name,
-                icon: purpleStar
+                icon: darkGreenStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
             }
@@ -2057,7 +2061,7 @@
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
                 title: resource.name,
-                icon: yellowStar
+                icon: darkRedStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
             }
