@@ -1769,7 +1769,7 @@
           globalMap = map;
         }
           //create direction route between two points
-          function masterRoute(directionsDisplay, directionsService){
+          function masterRoute(directionsDisplay, directionsService, destinationLat, destinationLong){
 
 
            directionsDisplay.setMap(globalMap);
@@ -1797,7 +1797,7 @@
                       directionsService.route({
 
                         origin: globalMap.getCenter(), // make dependent on user location
-                        destination: {lat: 42.3765, lng: -71.2356},  // make dependent on user click
+                        destination: {lat: destinationLat, lng: destinationLong},  // make dependent on user click
                         // Note that Javascript allows us to access the constant
                         // using square brackets and a string value as its
                         // "property."
@@ -1805,6 +1805,7 @@
                       }, function(response, status) {
                         if (status == 'OK') {
                           directionsDisplay.setDirections(response);
+                          directionsDisplay.setPanel(document.getElementById('right-panel'));
                         } else {
                           window.alert('Directions request failed due to ' + status);
                         }
@@ -1834,9 +1835,14 @@
         wantDirections.addEventListener('click', () =>{
            var directionsDisplay = new google.maps.DirectionsRenderer;
            var directionsService = new google.maps.DirectionsService;
-          masterRoute(directionsDisplay, directionsService);
+          masterRoute(directionsDisplay, directionsService, 42.371610, -71.237850);
         });
 
+    function getDirections(lat, lng) {
+      var directionsDisplay = new google.maps.DirectionsRenderer;
+      var directionsService = new google.maps.DirectionsService;
+      masterRoute(directionsDisplay, directionsService, lat, lng);
+    }
 
     function makeInfoWindowEvent(map, infowindow, infoText, marker) {
        google.maps.event.addListener(marker, 'click', function() {
@@ -1858,7 +1864,9 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('food')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i>";
+
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
+
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
