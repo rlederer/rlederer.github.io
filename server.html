@@ -1614,6 +1614,7 @@
           return markers;
         }
         var globalMap;
+        var markers = [];
         var greenStar = 'https://i.imgur.com/bdR1x8n.png';
         var blueStar = 'https://i.imgur.com/xdPAlz9.png';
         var purpleStar = 'https://i.imgur.com/lTWfWLq.png';
@@ -1880,15 +1881,29 @@
        });
     }
 
+    function removeMarkers(resourceType){
+      for(i = 0; i < markers.length; i++){
+        console.log(markers[i]);
+        if (markers[i].type != undefined && markers[i].type.includes(resourceType)) {
+          markers[i].setMap(null);
+        }
+      }
+    }
+
 
         // function loadMap(typer) {
         food.addEventListener('click', () =>{
+          var element = event.currentTarget;
+          element.clicks = (element.clicks || 0) + 1;
+          console.log(element.clicks);
           // console.log(typer)
           // Load JSON Data
+          if (element.clicks % 2 != 0) {
           const resourceMarkers = getJSONMarkers();
           var infowindow = new google.maps.InfoWindow();
           // Initialize Google Markers
           for(resource of resourceMarkers) {
+            console.log(resource.type);
               var website = resource.website;
               if (website == "") website = "#";
             // console.log(typer);
@@ -1903,9 +1918,15 @@
                 icon: greenStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
+              markers.push(marker);
             }
           }
-        });
+        } else {
+          removeMarkers();
+         }
+        }
+
+        );
         immigration.addEventListener('click', () =>{
           // console.log(typer)
           // Load JSON Data
