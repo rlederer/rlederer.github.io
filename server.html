@@ -1,16 +1,16 @@
 <!DOCTYPE html>
+
 <html>
 <center>
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
    <title>Waltham Resources</title>
   </head>
 
   <body onload = "initMap()">
-    <h1><i><a href = "index.html">Waltham Resource Guide</a></i></h1>
+    <h1><i><a href = "server.html">Waltham Resource Guide</a></i></h1>
 
-    <div id = "map" style = "width:704px; height:528px; display: inline-block"> </div>
+    <div id = "map" style = "width:940px; height:480px; float:left; display: inline-block"> </div>
       </head>
       <body>
 <style>
@@ -19,28 +19,25 @@
         line-height: 30px;
         padding-left: 10px;
       }
-
       #right-panel select, #right-panel input {
         font-size: 15px;
-      }
 
+      }
       #right-panel select {
         width: 100%;
       }
-
       #right-panel i {
         font-size: 12px;
       }
       #right-panel {
         height: 100%;
-        float: none;
+        float: ;
         width: 640px;
         overflow: auto;
       }
-
       </style>
 <div id="right-panel"></div>
-        
+
         <div id="floating-panel">
            <b>Mode of Travel: </b>
            <select id="mode">
@@ -50,13 +47,46 @@
              <option value="TRANSIT">Transit</option>
            </select>
            </div>
+<style>
+#dropdown {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #dropdown select, #dropdown input {
+        font-size: 15px;
+
+      }
+      #dropdown select {
+        width: 100%;
+      }
+      #dropdown i {
+        font-size: 12px;
+      }
+      #dropdown {
+        height: 100%;
+        float: right;
+        width: 640px;
+        overflow: auto;
+      }
+</style>
 
       <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">What types of resources do you need?</button>
         <div id="myDropdown" class="dropdown-content">
+          <button id="adulteducation">Adult Education</button>
+          <br>
+          <button id="childcare">Childcare</button>
+          <br>
+          <button id="employment">Employment</button>
+            <br>
           <button id='food'>Food</button>
           <br>
+          <button id="fuelassistance">Fuel Assistance</button>
+          <br>
           <button id="healthcare">Health Care</button>
+          <br>
+          <button id="hotline">Hotline</button>
           <br>
           <button id="housing">Housing</button>
           <br>
@@ -64,21 +94,16 @@
           <br>
           <button id="legaladvice">Legal Advice</button>
           <br>
-          <button id="fuelassistance">Fuel Assistance</button>
-          <br>
-          <button id="hotline">Hotline</button>
-          <br>
-          <button id="adulteducation">Adult Education</button>
-          <br>
-          <button id="childcare">Childcare</button>
-          <br>
-          <button id="employment">Employment</button>
+
         </div>
       </div>
       <button id="wantDirections">Want directions?</button>
       </div>
 
-    </div>
+
+    <div id="demo"></div>
+
+
       <script>
       /* When the user clicks on the button,
       toggle between hiding and showing the dropdown content */
@@ -117,7 +142,7 @@
                  "time close": "6:00 PM",
                  "website": "https://walthambgc.org/",
                  "phone": "781-893-6620",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -146,7 +171,7 @@
                  "time close": "1:00 PM",
                  "website": "https://massachusetts.salvationarmy.org/MA/Waltham",
                  "phone": "(781) 894-0413",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "Christian",
                  "cost": "free",
                  "documentation req.": "no",
@@ -175,7 +200,7 @@
                  "time close": "",
                  "website": "https://massachusetts.salvationarmy.org/MA/Waltham",
                  "phone": "(781) 894-0413",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "Christian",
                  "cost": "free",
                  "documentation req.": "no",
@@ -204,7 +229,7 @@
                  "time close": "16:30",
                  "website": "https://www.communitydaycenter.org/",
                  "phone": "(781) 392-6311",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -233,7 +258,7 @@
                  "time close": "",
                  "website": "https://www.mhsainc.org/womensshelter",
                  "phone": "781-894-1225",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -262,7 +287,7 @@
                  "time close": "",
                  "website": "https://www.mhsainc.org/mensshelter",
                  "phone": "",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -291,7 +316,7 @@
                  "time close": "n/a",
                  "website": "reachma.org",
                  "phone": "781-891-0724",
-                 "hotline #": "800-899-4000",
+                 "hotline": "800-899-4000",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -320,7 +345,7 @@
                  "time close": "n/a",
                  "website": "https://www.mass.gov/orgs/housing-and-community-development",
                  "phone": "(866) 584-0653",
-                 "hotline #": "(866) 584-0653",
+                 "hotline": "(866) 584-0653",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -349,7 +374,7 @@
                  "time close": "5:00 PM",
                  "website": "https://www.mass.gov/service-details/emergency-housing-assistance-resource-information",
                  "phone": "(617) 573-1106",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "",
@@ -378,7 +403,7 @@
                  "time close": "",
                  "website": "",
                  "phone": "",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -407,7 +432,7 @@
                  "time close": "8:00 AM",
                  "website": "https://www.housingworks.net/program/1257",
                  "phone": "617-423-4366",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -436,7 +461,7 @@
                  "time close": "",
                  "website": "https://www.mhsainc.org/soupkitchen",
                  "phone": "781-883-2050",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -465,7 +490,7 @@
                  "time close": "5:00 PM",
                  "website": "http://watchcdc.org/community-resource-guide-familly-shelters/",
                  "phone": "866-584-0653",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "yes",
@@ -494,7 +519,7 @@
                  "time close": "12:00 PM",
                  "website": "https://www.mhsainc.org/foodpantry",
                  "phone": "781-883-2050",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -523,7 +548,7 @@
                  "time close": "5:00 PM",
                  "website": "https://www.jfcsboston.org/",
                  "phone": "781-647-5327 x 1372",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "jewish",
                  "cost": "free",
                  "documentation req.": "no",
@@ -552,7 +577,7 @@
                  "time close": "",
                  "website": "https://www.mhsainc.org/hurleyhouse",
                  "phone": "781-899-2540",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "no",
@@ -581,7 +606,7 @@
                  "time close": "7:00 PM",
                  "website": "",
                  "phone": "",
-                 "hotline #": "800-645-8333",
+                 "hotline": "800-645-8333",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "",
@@ -610,7 +635,7 @@
                  "time close": "6:00 PM",
                  "website": "",
                  "phone": "781-314-5400",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "",
@@ -639,7 +664,7 @@
                  "time close": "Mon,Tue,Thur 9pm Wed Fri 5pm Sat 1pm",
                  "website": "http://www.charlesriverhealth.org",
                  "phone": "781-693-3800",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "",
@@ -668,7 +693,7 @@
                  "time close": "",
                  "website": "",
                  "phone": "781-883-2050",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "it is a church? christian?",
                  "cost": "free",
                  "documentation req.": "",
@@ -697,7 +722,7 @@
                  "time close": "n/a",
                  "website": "",
                  "phone": "781-899-0357",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -726,7 +751,7 @@
                  "time close": "",
                  "website": "",
                  "phone": "(781) 891-6689",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "everyone welcome",
@@ -755,7 +780,7 @@
                  "time close": "",
                  "website": "http://www.waysideyouth.org/OurServices/WaysideMetroBoston/WaysideWaltham.aspx",
                  "phone": "781-891-0555",
-                 "hotline #": "mobile crisis intervention 781.893.2003",
+                 "hotline": "mobile crisis intervention 781.893.2003",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -784,7 +809,7 @@
                  "time close": "n/a",
                  "website": "https://www.baycovehumanservices.org/caspar",
                  "phone": "617-371-3000",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "no",
@@ -813,7 +838,7 @@
                  "time close": "8:00:00 PM",
                  "website": "n/a",
                  "phone": "781-693-3800",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "church affiliated",
                  "cost": "free",
                  "documentation req.": "no",
@@ -842,7 +867,7 @@
                  "time close": "",
                  "website": "http://walthamfamilyschool.org/get-involved/apply/",
                  "phone": "781-314-5696",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free for low income family",
                  "documentation req.": "no",
@@ -871,7 +896,7 @@
                  "time close": "",
                  "website": "https://www.bentley.edu/centers/service-learning-center/power-program-esl-tutoring",
                  "phone": "781-314-5586",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -900,7 +925,7 @@
                  "time close": "",
                  "website": "http://wp.watchcdc.org/adult-education/",
                  "phone": "781-891-6689 x 202",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -929,7 +954,7 @@
                  "time close": "n/a",
                  "website": "https://www.liftcommunities.org",
                  "phone": "617-427-1154",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "no",
@@ -958,7 +983,7 @@
                  "time close": "n/a",
                  "website": "n/a",
                  "phone": "781-899-6576",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -987,7 +1012,7 @@
                  "time close": "6:00om",
                  "website": "https://www.thelearningzoneonline.com/waltham/",
                  "phone": "781-891-3600",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "Daily $95 — Sibling $76",
                  "documentation req.": "no",
@@ -1016,7 +1041,7 @@
                  "time close": "5:00 PM",
                  "website": "http://bclawlab.org",
                  "phone": "617-552-0248",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "free",
                  "documentation req.": "Please fill out this form first https://docs.google.com/forms/d/e/1FAIpQLSes79q_yFzD-Dej1wQZvTK49sdRzZ_2dkirUVRdgS9dGs16Rg/viewform?c=0&w=1",
@@ -1045,7 +1070,7 @@
                  "time close": "5:00 p.m",
                  "website": "https://www.jfcsboston.org",
                  "phone": "781-647-5327",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "P",
@@ -1074,7 +1099,7 @@
                  "time close": "n/a",
                  "website": "http://www.communitylegal.org",
                  "phone": "508-752-3718",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "http://www.communitylegal.org",
@@ -1103,7 +1128,7 @@
                  "time close": "4:00 PM",
                  "website": "http://wp.watchcdc.org/adult-education/",
                  "phone": "",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -1132,7 +1157,7 @@
                  "time close": "5:00 p.m",
                  "website": "https://www.jfcsboston.org",
                  "phone": "781-647-5327",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -1161,7 +1186,7 @@
                  "time close": "",
                  "website": "",
                  "phone": "781-894-5302",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -1190,7 +1215,7 @@
                  "time close": "4:00 PM",
                  "website": "http://metrosouthwestajc.com/faq.html",
                  "phone": "508-766-5700",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "",
@@ -1219,7 +1244,7 @@
                  "time close": "",
                  "website": "",
                  "phone": "",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "",
                  "cost": "",
                  "documentation req.": "",
@@ -1248,7 +1273,7 @@
                  "time close": "",
                  "website": "http://www.cpresente.org/home.htm",
                  "phone": "857-256-2958",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "",
@@ -1277,7 +1302,7 @@
                  "time close": "n/a",
                  "website": "no",
                  "phone": "617-871-7544",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "yes",
                  "cost": "",
                  "documentation req.": "",
@@ -1306,7 +1331,7 @@
                  "time close": "n/a",
                  "website": "https://www.gbls.org",
                  "phone": "617-371-1234",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "",
@@ -1335,7 +1360,7 @@
                  "time close": "n/a",
                  "website": "http://www.miracoalition.org",
                  "phone": "617-350-5480",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "",
@@ -1364,7 +1389,7 @@
                  "time close": "n/a",
                  "website": "http://www.stmarywaltham.org/",
                  "phone": "781-891-1730",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "yes, Catholic",
                  "cost": "free",
                  "documentation req.": "",
@@ -1393,7 +1418,7 @@
                  "time close": "5:00 p.m",
                  "website": "http://www.jfcsboston.org/",
                  "phone": "781-647-5327",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "yes, Jewish",
                  "cost": "",
                  "documentation req.": "",
@@ -1422,7 +1447,7 @@
                  "time close": "",
                  "website": "https://www.greenenergyconsumers.org/heatingoil",
                  "phone": "800-287-3950",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "application required",
@@ -1451,7 +1476,7 @@
                  "time close": "n/a",
                  "website": "https://www.masssave.com/en/saving/residential-rebates/",
                  "phone": "866-867-8729",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "fee included",
                  "documentation req.": "application required",
@@ -1480,7 +1505,7 @@
                  "time close": "n/a",
                  "website": "http://www.miracoalition.org/",
                  "phone": "617-350-5480",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "no",
                  "documentation req.": "",
@@ -1509,7 +1534,7 @@
                  "time close": "n/a",
                  "website": "https://supportkind.org/",
                  "phone": "(617) 207-4138",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "",
                  "documentation req.": "yes",
@@ -1538,7 +1563,7 @@
                  "time close": "5:00 PM",
                  "website": "http://www.clsacc.org/index.html",
                  "phone": "617-661-1010",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "fees range from $5-$60 per visit",
                  "documentation req.": "yes",
@@ -1567,7 +1592,7 @@
                  "time close": "N/A",
                  "website": "http://www.gbls.org/",
                  "phone": "617-371-1234",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "yes",
                  "documentation req.": "yes",
@@ -1596,7 +1621,7 @@
                  "time close": "N/A",
                  "website": "http://iine.us/",
                  "phone": "617-695-9990",
-                 "hotline #": "",
+                 "hotline": "",
                  "religious affliation": "none",
                  "cost": "fee waiver available",
                  "documentation req.": "yes",
@@ -1615,7 +1640,6 @@
           return markers;
         }
         var globalMap;
-        var markers = [];
         var greenStar = 'https://i.imgur.com/bdR1x8n.png';
         var blueStar = 'https://i.imgur.com/xdPAlz9.png';
         var purpleStar = 'https://i.imgur.com/lTWfWLq.png';
@@ -1629,7 +1653,7 @@
         var markerImage = 'https://image.ibb.co/m5CUCq/star.png';
         function initMap() {
           // Initialize Google Maps
-          
+
           const map =  new google.maps.Map(document.getElementById("map"), {
             center: {lat:42.3767, lng:-71.2356},
             zoom: 11,
@@ -1800,22 +1824,14 @@
         }
           //create direction route between two points
           function masterRoute(directionsDisplay, directionsService, destinationLat, destinationLong){
-
-
            directionsDisplay.setMap(globalMap);
-
            calculateAndDisplayRoute(directionsService, directionsDisplay);
-
           document.getElementById('mode').addEventListener('change', function() {
             calculateAndDisplayRoute(directionsService, directionsDisplay);
           });
          function calculateAndDisplayRoute(directionsService, directionsDisplay) {
                  var selectedMode = document.getElementById('mode').value;
-
           if (navigator.geolocation) {
-
-
-
           navigator.geolocation.getCurrentPosition(function(position) {
             console.log("a"+globalMap.getCenter().toString());
             var pos = {
@@ -1825,7 +1841,6 @@
               globalMap.setCenter(pos);
               console.log("c"+globalMap.getCenter().toString());
                       directionsService.route({
-
                         origin: globalMap.getCenter(), // make dependent on user location
                         destination: {lat: destinationLat, lng: destinationLong},  // make dependent on user click
                         // Note that Javascript allows us to access the constant
@@ -1840,18 +1855,14 @@
                           window.alert('Directions request failed due to ' + status);
                         }
                       })
-
               console.log("b"+globalMap.getCenter().toString());
            }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
         } else {
           // Browser doesn't support Geolocation
-
           handleLocationError(false, infoWindow, map.getCenter());
         }
-
-
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -1859,59 +1870,40 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-
                }
              }
-
         wantDirections.addEventListener('click', () =>{
            var directionsDisplay = new google.maps.DirectionsRenderer;
            var directionsService = new google.maps.DirectionsService;
           masterRoute(directionsDisplay, directionsService, 42.371610, -71.237850);
         });
-
     function getDirections(lat, lng) {
       var directionsDisplay = new google.maps.DirectionsRenderer;
       var directionsService = new google.maps.DirectionsService;
       masterRoute(directionsDisplay, directionsService, lat, lng);
     }
-
     function makeInfoWindowEvent(map, infowindow, infoText, marker) {
        google.maps.event.addListener(marker, 'click', function() {
         infowindow.setContent(infoText);
         infowindow.open(map, marker);
        });
     }
-
-    function removeMarkers(resourceType){
-      for(i = 0; i < markers.length; i++){
-        console.log(markers[i]);
-        if (markers[i].type != undefined && markers[i].type.includes(resourceType)) {
-          markers[i].setMap(null);
-        }
-      }
-    }
-
-
         // function loadMap(typer) {
         food.addEventListener('click', () =>{
-          var element = event.currentTarget;
-          element.clicks = (element.clicks || 0) + 1;
-          console.log(element.clicks);
           // console.log(typer)
           // Load JSON Data
-          if (element.clicks % 2 != 0) {
           const resourceMarkers = getJSONMarkers();
           var infowindow = new google.maps.InfoWindow();
           // Initialize Google Markers
           for(resource of resourceMarkers) {
-            console.log(resource.type);
               var website = resource.website;
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('food')){
-
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
-
+              // document.getElementById("demo").innerHTML += (resource.name+="<br>");
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
+              var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -1919,15 +1911,9 @@
                 icon: greenStar
               })
               makeInfoWindowEvent(globalMap, infowindow, infoText, marker);
-              markers.push(marker);
             }
           }
-        } else {
-          removeMarkers();
-         }
-        }
-
-        );
+        });
         immigration.addEventListener('click', () =>{
           // console.log(typer)
           // Load JSON Data
@@ -1939,7 +1925,9 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('immigration')){
-            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
+            var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.hotline + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
                 position: new google.maps.LatLng(resource.lat, resource.lng),
@@ -1961,6 +1949,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('healthcare')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -1983,6 +1973,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('housing')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2005,6 +1997,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('legaladvice')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2027,6 +2021,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('fuelassistance')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2049,6 +2045,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('hotline')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + "<br>" + "hotline #"+ resource.hotline+ " regular phone #" +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2071,6 +2069,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('adulteducation')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2093,6 +2093,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('childcare')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2115,6 +2117,8 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('employment')){
+              var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "reg phone " +resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Directions?</i></a>";
+              document.getElementById("demo").innerHTML += menutext += "<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
                 map: globalMap,
@@ -2126,16 +2130,14 @@
             }
           }
         });
-        </script>
+      </script>
 
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX9GFC7YWEnEBGM6aWQic5tq7OZ91jwFM&callback=initMap">
       </script>
 
       <br><br><br><i>
           <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></i>
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </body>
 </center>
 </html>
