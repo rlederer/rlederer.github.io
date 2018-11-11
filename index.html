@@ -2038,7 +2038,7 @@
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('food')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
               document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
 
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
@@ -2070,7 +2070,7 @@ var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  +
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('immigration')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
 document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
@@ -2094,7 +2094,7 @@ document.getElementById("demo").innerHTML += menutext += "<br>––––––
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('healthcare')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
               document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
@@ -2118,7 +2118,7 @@ var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  +
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('housing')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
               document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
@@ -2142,7 +2142,7 @@ var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  +
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('legaladvice')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
               document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
@@ -2166,7 +2166,7 @@ var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  +
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('fuelassistance')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
               document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
@@ -2214,7 +2214,7 @@ var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  +
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('adulteducation')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
               document.getElementById("demo").innerHTML += menutext += "<br>–––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
@@ -2238,7 +2238,7 @@ var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  +
               if (website == "") website = "#";
             // console.log(typer);
             if(resource.type.includes('childcare')){
-var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
+var menutext = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>"  + "<br>" + "<b>phone:</b> " +resource.phone + "<br><b>address: </b>" + resource.address + ", " + resource.city + "<br><b>days open: </b>" + resource.daysOpen + "<br><b>time open: </b>" + resource.timeOpen + "<b> time close:</b> " + resource.timeClose +"<br><b>description: </b>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>get directions<br></i></a>";
                 document.getElementById("demo").innerHTML += menutext += "<br> –––––––––––––––––––––––<br>";
             var infoText = "<b><a href ="+ website + ">" + resource.name + "</a></b><br>" + resource.address + "<br>" + resource.phone + "<br><i>" + resource.description + "</i><br><a href=\"javascript:getDirections(" + resource.lat + "," + resource.lng + ")\"><i>Want directions?</i></a>";
               let marker = new google.maps.Marker({
